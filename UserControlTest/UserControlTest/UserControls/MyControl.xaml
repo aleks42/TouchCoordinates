@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:effects="clr-namespace:UserControlTest.Effects" xmlns:extensions="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="UserControlTest.UserControls.MyControl">
+    <ContentView.Content>
+        <Grid>
+            <Grid x:Name="mainGrid" BackgroundColor="Gray">
+                <Label Text="Hello Xamarin.Forms!" />
+            </Grid>
+            <BoxView>
+                <BoxView.Effects>
+                    <extensions:TouchEffect 
+                        Completed="TouchEffect_Completed"
+                        LongPressCompleted="TouchEffect_LongPressCompleted"
+                        StateChanged="TouchEffect_StateChanged"
+                        StatusChanged="TouchEffect_StatusChanged"
+                        HoverStateChanged="TouchEffect_HoverStateChanged"
+                        HoverStatusChanged="TouchEffect_HoverStatusChanged"
+                        InteractionStatusChanged="TouchEffect_InteractionStatusChanged"
+                        />
+                </BoxView.Effects>
+            </BoxView>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
